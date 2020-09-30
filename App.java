@@ -1,13 +1,11 @@
 package mavenpac;
 
-
 public class App {
     public static void main(String[] args) {
         for (int i = 1; i <= 10; i++) {
                 new Thread(new Runnable() {
                     public void run() {
-                        System.err.println("Thread Id:"+ Thread.currentThread().getId());
-                        
+                        System.err.println("Thread Id:"+ Thread.currentThread().getId());    
                     }
                 }).start();
      
@@ -17,16 +15,12 @@ public class App {
                 
                     Thread.sleep(random);
                     
-                    System.out.println("Sleep time = "+(System.currentTimeMillis()-start)+ " "+ "ms");
+                    System.out.println("Sleep time = "+(System.currentTimeMillis()-start)+" "+ "ms");
 
-                    
                 } catch (InterruptedException ex) {
-                    
-                    
+                         
                 }
             }
         }
-
-
 }
         
